@@ -6,6 +6,7 @@
 
 ## Editors
 - Typora
+- your favorite text editor
 
 ## Publishing Tools
 - Sphinx
