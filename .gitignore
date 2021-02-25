@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Emacs
+*~
+\#*\#
+
+# Obsidian.md
+.obsidian/*
+!.obsidian/README.md
