@@ -3,6 +3,7 @@
 ## Wiki and Wiki-like Engines
 - Obsidian
 - Gollum
+- Foam
 
 ## Editors
 - Typora
@@ -12,15 +13,17 @@
 - Sphinx
 - Docusaurus
 
-## Syndication Tools
-- git
+## Git-based Syndication Tools
+- Git
 - GitHub
 - GitLab
-- gitea
+- Gitea
+
+## Shared Versioned Filesystems
 - Nextcloud
 
 ## Link Copiers
-- [# CoLT](https://github.com/jgbishop/colt) (Firefox)
+- [CoLT](https://github.com/jgbishop/colt) (Firefox)
 - [Create Link](https://chrome.google.com/webstore/detail/create-link/gcmghdmnkfdbncmnmlkkglmnnhagajbm) (Chrome)
 
 # Technologies
