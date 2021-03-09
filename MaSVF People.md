@@ -1,6 +1,7 @@
 # People
 
 - Peter Kaminski
+- Bill Anderson
 - (add yourself)
 
 # Communication Channels
