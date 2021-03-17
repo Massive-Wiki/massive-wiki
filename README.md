@@ -40,7 +40,7 @@ Since MaSVF Wiki's primary repo is hosted on GitHub, you need to be a member of 
 
 Any GitHub member can "fork" the repo (make a copy of the repo into their account), make edits, and then make a pull request for the primary repo maintainers to consider.
 
-Alternatively, you can ask to be a member of the repo, and then you will have privileges to make edits directly in the repo.  Contact [Peter Kaminski](mailto:kaminski@istori.com) to ask to be a member of the MaSVR repo.
+Alternatively, you can ask to be a member of the repo, and then you will have privileges to make edits directly in the repo.  Contact [Peter Kaminski](mailto:kaminski@istori.com) to ask to be a member of the MaSVF repo.
 
 Being a member of the repo will make editing easier.
 
