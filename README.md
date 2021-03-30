@@ -12,9 +12,8 @@ It's not just a wiki - it's a Massive Wiki.
 
 - [[Massive Wiki Manifesto]]
 - [[Massive Wiki People]]
-- [[Massive Wiki Starter Guidebook]]
 - [[Tools and Technologies]]
-- [[Concerns]]
+- [[Ideas and Concerns]]
 
 ## Try Massive Wiki Yourself
 
@@ -31,7 +30,5 @@ We are building a Massive Wiki Starter Guidebook.  It is still under constructio
 [[5. Centralized Git Collaboration Models]]
 
 [[6. Resolving Git Sync Issues]]
-
-[[9. Frequently Asked Questions]]
 
 Here's a summarization, in a [[Massive Wiki Quick Setup Card]].
