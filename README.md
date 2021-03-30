@@ -2,7 +2,7 @@
 
 ## Welcome to Massive Wiki
 
-Massive Wiki is a movement to create not a wiki engine, but a wiki *ecosystem*, that provides classic wiki utility with a plurality of tools and processes that enable decentralization and federation of the pages.
+Massive Wiki is a movement to create a wiki *ecosystem* (rather than just one engine) that provides classic wiki utility, with a plurality of tools and processes that enable decentralization and federation of the pages.
 
 Wikis are made of pages. Free the pages to go where they need to go!
 
