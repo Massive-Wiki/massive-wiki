@@ -2,6 +2,7 @@
 
 - Peter Kaminski
 - Bill Anderson
+- Marty McGowan
 - (add yourself)
 
 # Communication Channels
