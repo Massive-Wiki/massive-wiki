@@ -1,6 +1,6 @@
 # Massive Wiki Manifesto
 
-Massive Wiki is a movement to create a wiki *ecosystem* (rather than just an engine) that provides classic wiki utility, with a plurality of tools and processes that enable decentralization and federation of the pages..
+Massive Wiki is a movement to create a wiki *ecosystem* (rather than just an engine) that provides classic wiki utility, with a plurality of tools and processes that enable decentralization and federation of the pages.
 
 Wikis are made of pages. Free the pages to go where they need to go!
 
