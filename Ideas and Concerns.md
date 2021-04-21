@@ -4,23 +4,23 @@ This page collects various various thoughts, connections, and reflections about 
 
 ## Page Contention
 
-Within one multiplayer MaSVF installation, how does an editing tool interact with the syndication / synchronization process, particularly when multiple people are editing?
+Within one multiplayer Massive installation, how does an editing tool interact with the syndication / synchronization process, particularly when multiple people are editing?
 
 For synchronization-by-git, does there need to be some real-time synchronization (XMPP? other?) happening as well?
 
 Is there a role for git branches?
 
-When/how do we deploy CRDT (or OT or similar) for MaSVF?
+When/how do we deploy CRDT (or OT or similar) for Massive?
 
 ## Decentralization and Syndication
 
-Each MaSVF installation uses its own file sharing and versioning solution, including git repo, Nextcloud file sharing, etc.
+Each Massive installation uses its own file sharing and versioning solution, including git repo, Nextcloud file sharing, etc.
 
-What support does MaSVF provide for sharing *between* installations? When is page history preserved, and when is it discarded? How do forks and merges work?
+What support does Massive provide for sharing *between* installations? When is page history preserved, and when is it discarded? How do forks and merges work?
 
 ## Markdown Flavors
 
-MaSVF will need to figure out how to support various flavors and levels of Markdown.
+Massive will need to figure out how to support various flavors and levels of Markdown.
 
 ## Semantic Meaning of Header Levels
 
@@ -46,9 +46,9 @@ Case in point: is there always an H1 at the top of the page with the page title?
 
 ## Link Syntax
 
-MaSVF uses double square brackets for links internal to the wiki, but there are subtle concerns about the syntax.
+Massive uses double square brackets for links internal to the wiki, but there are subtle concerns about the syntax.
 
 - intra-page anchors / headers
-- converting page names with non-URL-safe characters to URLs in a way that's deterministic and compatible across the MaSVF ecosystem
+- converting page names with non-URL-safe characters to URLs in a way that's deterministic and compatible across the Massive ecosystem
 - rewriting links when page names change
 

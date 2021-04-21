@@ -6,5 +6,5 @@
 
 # Communication Channels
 
-- [Massive Wiki Chat](https://chat.collectivesensecommons.org/agora/channels/masvf-wiki
+- [Massive Wiki Chat](https://chat.collectivesensecommons.org/agora/channels/massive-wiki
 ) (CSC Mattermost)
