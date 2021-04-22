@@ -19,16 +19,16 @@ It's not just a wiki - it's a Massive Wiki.
 
 We are building a Massive Wiki Starter Guidebook.  It is still under construction, please excuse the dust and mess!  Here are the pages we have so far.
 
-[[1. Clone a Massive Wiki to Your Computer]]
+[[Massive Wiki Starter Guidebook/1. Clone a Massive Wiki to Your Computer]]
 
-[[2. Open a Massive Wiki on Your Computer]]
+[[Massive Wiki Starter Guidebook/2. Open a Massive Wiki on Your Computer]]
 
-[[3. Edit a Massive Wiki on Your Computer]]
+[[Massive Wiki Starter Guidebook/3. Edit a Massive Wiki on Your Computer]]
 
-[[4. Sync a Massive Wiki]]
+[[Massive Wiki Starter Guidebook/4. Sync a Massive Wiki]]
 
-[[5. Centralized Git Collaboration Models]]
+[[Massive Wiki Starter Guidebook/5. Centralized Git Collaboration Models]]
 
-[[6. Resolving Git Sync Issues]]
+[[Massive Wiki Starter Guidebook/6. Resolving Git Sync Issues]]
 
-Here's a summarization, in a [[Massive Wiki Quick Setup Card]].
+Here's a summarization, in a [[Massive Wiki Starter Guidebook/Massive Wiki Quick Setup Card]].

@@ -1,10 +1,14 @@
-# People
+# Massive Wiki People
 
-- Peter Kaminski
-- Bill Anderson
-- (add yourself)
+## People
 
-# Communication Channels
+- [[People/Peter Kaminski]]
+- [[People/Bill Anderson]]
+- [[People/Jerry Michalski]]
+- [[People/Vincent Arena]]
+- (you?)
+
+## Communication Channels
 
 - [Massive Wiki Chat](https://chat.collectivesensecommons.org/agora/channels/massive-wiki
 ) (CSC Mattermost)
