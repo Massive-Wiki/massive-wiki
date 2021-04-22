@@ -59,8 +59,8 @@ def main():
 
         # copy all the source files
         shutil.rmtree(Path() / args.dir / ".staticjinjawiki" / "output", ignore_errors=True)
-        shutil.copytree(Path() / args.dir / "static", Path() / args.dir / ".staticjinjawiki" / "output", ignore=shutil.ignore_patterns('.*'))
         shutil.copytree(Path() / args.dir, Path() / args.dir / ".staticjinjawiki" / "output", ignore=shutil.ignore_patterns('.*'))
+        shutil.copytree(Path() / args.dir / ".staticjinjawiki" / "_static", Path() / args.dir / ".staticjinjawiki" / "output" / "_static", ignore=shutil.ignore_patterns('.*'))
 
         site = Site.make_site(
             searchpath=args.dir,
