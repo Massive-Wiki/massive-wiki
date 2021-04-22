@@ -11,6 +11,7 @@ It's not just a wiki - it's a Massive Wiki.
 ## Read More About Massive
 
 - [[Massive Wiki Manifesto]]
+- [[Massive Wiki Conceptual Diagram]]
 - [[Massive Wiki People]]
 - [[Ideas and Concerns]]
 

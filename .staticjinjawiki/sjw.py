@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Static Jinja Wiki v1.0.0 - https://github.com/peterkaminski/staticjinjawiki
+# Static Jinja Wiki v1.0.1 - https://github.com/peterkaminski/staticjinjawiki
 
 import os
 from pathlib import Path
@@ -56,6 +56,9 @@ def main():
         if not os.path.exists(Path() / args.dir / "index.md"):
             shutil.copyfile(Path() / args.dir / "README.md", Path() / args.dir / "index.md")
             index_md_created = True
+
+        # copy all the source files
+        shutil.copytree(Path() / args.dir, Path() / args.dir / ".staticjinjawiki" / "output")
 
         site = Site.make_site(
             searchpath=args.dir,
