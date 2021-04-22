@@ -12,7 +12,6 @@ It's not just a wiki - it's a Massive Wiki.
 
 - [[Massive Wiki Manifesto]]
 - [[Massive Wiki People]]
-- [[Tools and Technologies]]
 - [[Ideas and Concerns]]
 
 ## Try Massive Wiki Yourself
