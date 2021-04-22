@@ -11,4 +11,3 @@
 
 # Static Jinja Wiki
 .staticjinjawiki/output/*
-!.staticjinjawiki/output/css/
