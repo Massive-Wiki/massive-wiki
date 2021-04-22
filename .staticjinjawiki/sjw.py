@@ -58,7 +58,7 @@ def main():
             index_md_created = True
 
         # copy all the source files
-        shutil.copytree(Path() / args.dir, Path() / args.dir / ".staticjinjawiki" / "output")
+        shutil.copytree(Path() / args.dir, Path() / args.dir / ".staticjinjawiki" / "output", dirs_exist_ok=True, ignore=shutil.ignore_patterns('.*'))
 
         site = Site.make_site(
             searchpath=args.dir,
