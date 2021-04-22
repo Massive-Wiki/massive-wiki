@@ -3,6 +3,7 @@ easywatch==0.0.5
 Jinja2==2.11.3
 Markdown==3.3.4
 MarkupSafe==1.1.1
-mdx-wikilink-plus==1.3.3
+#mdx-wikilink-plus==1.3.3
+git+git://github.com/peterkaminski/mdx_wikilink_plus@master#egg=mdx-wikilink-plus
 staticjinja==1.0.4
 watchdog==2.0.2
