@@ -45,7 +45,7 @@ def render_md(site, template, **kwargs):
 
     # compile and stream the result
     os.makedirs(out.parent, exist_ok=True)
-    site.get_template(str(Path() / ".staticjinjawiki" / "page.html")).stream(**kwargs).dump(str(out), encoding="utf-8")
+    site.get_template(str(Path() / ".staticjinjawiki" / "sjw-page.html")).stream(**kwargs).dump(str(out), encoding="utf-8")
 
 def main():
     argparser = init_argparse();
@@ -60,7 +60,7 @@ def main():
         # copy all the source files
         shutil.rmtree(Path() / args.dir / ".staticjinjawiki" / "output", ignore_errors=True)
         shutil.copytree(Path() / args.dir, Path() / args.dir / ".staticjinjawiki" / "output", ignore=shutil.ignore_patterns('.*'))
-        shutil.copytree(Path() / args.dir / ".staticjinjawiki" / ".static", Path() / args.dir / ".staticjinjawiki" / "output" / ".static")
+        shutil.copytree(Path() / args.dir / ".staticjinjawiki" / "sjw-static", Path() / args.dir / ".staticjinjawiki" / "output" / "sjw-static")
 
         site = Site.make_site(
             searchpath=args.dir,
