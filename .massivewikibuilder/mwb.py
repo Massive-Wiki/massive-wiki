@@ -43,6 +43,12 @@ def main():
     argparser = init_argparse();
     args = argparser.parse_args();
 
+    # get configuration
+    wiki_title = "Massive Wiki"
+    author = "the Massive Wiki Team"
+    repo = '<a href="https://github.com/Massive-Wiki/massive-wiki">GitHub/Massive-Wiki/massive-wiki</a>'
+    license = '<a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>'
+
     # remember paths
     dir_output = os.path.abspath(args.output)
     dir_templates = os.path.abspath(args.templates)
@@ -58,25 +64,36 @@ def main():
         os.mkdir(dir_output)
 
         # copy wiki to output; render .md files to HTML
+        all_pages = []
         page = j.get_template('page.html')
         for root, dirs, files in os.walk(dir_wiki):
             dirs[:] = [d for d in dirs if not d.startswith('.')]
             files = [f for f in files if not f.startswith('.')]
-            path = re.sub(r'([ ]+_)|(_[ ]+)|([ ]+)', '_', root[len(dir_wiki)+1:])
+            readable_path = root[len(dir_wiki)+1:]
+            path = re.sub(r'([ ]+_)|(_[ ]+)|([ ]+)', '_', readable_path)
             if not os.path.exists(Path(dir_output) / path):
                 os.mkdir(Path(dir_output) / path)
             for file in files:
                 clean_name = re.sub(r'([ ]+_)|(_[ ]+)|([ ]+)', '_', file)
                 if file.lower().endswith('.md'):
                     markdown_body = markdown.convert((Path(root) / file).read_text())
-                    html = page.render(markdown_body=markdown_body)
+                    html = page.render(wiki_title=wiki_title, author=author, repo=repo, license=license, title=file[:-3], markdown_body=markdown_body)
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
+                    all_pages.append({'title':f"{readable_path}/{file[:-3]}", 'path':f"{path}/{clean_name[:-3]}.html"})
                 shutil.copy(Path(root) / file, Path(dir_output) / path / clean_name)
+
+        # copy README.html to index.html if no index.html
         if not os.path.exists(Path(dir_output) / 'index.html'):
             shutil.copyfile(Path(dir_output) / 'README.html', Path(dir_output) / 'index.html')
+
+        # copy static assets directory
         if os.path.exists(Path(dir_templates) / 'mwb-static'):
             shutil.copytree(Path(dir_templates) / 'mwb-static', Path(dir_output) / 'mwb-static')
         
+        # build all-pages.html
+        all_pages = sorted(all_pages, key=lambda i: i['title'].lower())
+        html = j.get_template('all-pages.html').render(pages=all_pages, wiki_title=wiki_title, author=author, repo=repo, license=license)
+        (Path(dir_output) / "all-pages.html").write_text(html)
 
     except Exception as e:
         print(e)
