@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Massive Wiki Builder v1.0.0 - https://github.com/peterkaminski/massivewikibuilder
+# Massive Wiki Builder v1.1.0 - https://github.com/peterkaminski/massivewikibuilder
 
 import argparse
 import os
@@ -8,6 +8,7 @@ import re
 import shutil
 import sys
 
+from datetime import timezone, datetime
 from pathlib import Path
 
 import jinja2
@@ -66,6 +67,7 @@ def main():
         # copy wiki to output; render .md files to HTML
         all_pages = []
         page = j.get_template('page.html')
+        build_time = datetime.now(timezone.utc).strftime("%A, %B %d, %Y at %H:%M UTC")
         for root, dirs, files in os.walk(dir_wiki):
             dirs[:] = [d for d in dirs if not d.startswith('.')]
             files = [f for f in files if not f.startswith('.')]
@@ -77,7 +79,7 @@ def main():
                 clean_name = re.sub(r'([ ]+_)|(_[ ]+)|([ ]+)', '_', file)
                 if file.lower().endswith('.md'):
                     markdown_body = markdown.convert((Path(root) / file).read_text())
-                    html = page.render(wiki_title=wiki_title, author=author, repo=repo, license=license, title=file[:-3], markdown_body=markdown_body)
+                    html = page.render(build_time=build_time, wiki_title=wiki_title, author=author, repo=repo, license=license, title=file[:-3], markdown_body=markdown_body)
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
                     all_pages.append({'title':f"{readable_path}/{file[:-3]}", 'path':f"{path}/{clean_name[:-3]}.html"})
                 shutil.copy(Path(root) / file, Path(dir_output) / path / clean_name)
@@ -92,7 +94,7 @@ def main():
         
         # build all-pages.html
         all_pages = sorted(all_pages, key=lambda i: i['title'].lower())
-        html = j.get_template('all-pages.html').render(pages=all_pages, wiki_title=wiki_title, author=author, repo=repo, license=license)
+        html = j.get_template('all-pages.html').render(build_time=build_time, pages=all_pages, wiki_title=wiki_title, author=author, repo=repo, license=license)
         (Path(dir_output) / "all-pages.html").write_text(html)
 
     except Exception as e:
