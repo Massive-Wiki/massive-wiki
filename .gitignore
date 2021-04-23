@@ -9,5 +9,5 @@
 .obsidian/*
 !.obsidian/README.md
 
-# Static Jinja Wiki
-.staticjinjawiki/output/*
+# Massive Wiki Builder
+.massivewikibuilder/output/*
