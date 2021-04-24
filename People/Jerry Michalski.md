@@ -1,3 +1,10 @@
+---
+emails: 
+  - sociate@gmail.com
+phones:
+  - +1 415-465-0256
+sortable-name: "Michalski, Jerry"
+---
 # Jerry Michalski
 ![Jerry's mug](https://lh3.googleusercontent.com/v8WvcYngSzard8nk1QguGNVuXVqPwjgPa1bItf2p3OieHfYBOtSdk6vhJ3QwhFu74WN-RvbJ4dmfUbmPDJzgLqwj6ETRDgj0q8ZJWFd2hoBGw9IBPDm4WfEVIDKvmAeLF48vO9V6Lg=w600)
 ## What about me?

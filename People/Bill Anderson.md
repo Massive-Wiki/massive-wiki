@@ -1,3 +1,20 @@
+---
+emails: 
+  - band@acm.org
+  - wlanderson@gmail.com
+full-name: William L Anderson
+organizations: 
+  - "Open Global Mind"
+  - "Collective Sense Commons"
+  - "Cloud Appreciation Society"
+phones:
+  - +1-512-693-7378
+short-name: Bill
+sortable-name: "Anderson, Bill"
+twitter: "@band"
+urls: 
+  - "https://about.me/wlanderson/"
+---
 # Bill Anderson
 
 ## What about me?
