@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-# Massive Wiki Builder v1.1.0 - https://github.com/peterkaminski/massivewikibuilder
+# Massive Wiki Builder v1.2.0 - https://github.com/peterkaminski/massivewikibuilder
 
 import argparse
+import json
 import os
 import re
 import shutil
@@ -11,6 +12,7 @@ import sys
 from datetime import timezone, datetime
 from pathlib import Path
 
+import yaml
 import jinja2
 
 from markdown import Markdown
@@ -39,6 +41,32 @@ def jinja2_environment(path_to_templates):
     return jinja2.Environment(
         loader=jinja2.FileSystemLoader(path_to_templates)
     )
+
+# take a path object pointing to a Markdown file
+# return Markdown (as string) and YAML front matter (as dict)
+# for YAML, {} = no front matter, False = YAML syntax error
+def read_markdown_and_front_matter(path):
+    with path.open() as infile:
+        lines = infile.readlines()
+    # take care to look exactly for two `---` lines with valid YAML in between
+    if re.match(r'^---$',lines[0]):
+        count = 0
+        found_front_matter_end = False
+        for line in lines[1:]:
+            count += 1
+            if re.match(r'^---$',line):
+                found_front_matter_end = True
+                break;
+        if found_front_matter_end:
+            try:
+                front_matter = yaml.safe_load(''.join(lines[1:count]))
+            except yaml.parser.ParserError:
+                # return Markdown + False (YAML syntax error)
+                return ''.join(lines), False
+            # return Markdown + front_matter
+            return ''.join(lines[count+1:]), front_matter
+    # return Markdown + empty dict
+    return ''.join(lines), {}
 
 def main():
     argparser = init_argparse();
@@ -78,10 +106,22 @@ def main():
             for file in files:
                 clean_name = re.sub(r'([ ]+_)|(_[ ]+)|([ ]+)', '_', file)
                 if file.lower().endswith('.md'):
-                    markdown_body = markdown.convert((Path(root) / file).read_text())
+                    # parse Markdown file
+                    markdown_text, front_matter = read_markdown_and_front_matter(Path(root) / file)
+                    if front_matter is False:
+                        print(f"NOTE: YAML syntax error in front matter of '{Path(root) / file}'")
+                        front_matter = {}
+                    # output JSON of front matter
+                    (Path(dir_output) / path / clean_name).with_suffix(".json").write_text(json.dumps(front_matter, indent=2))
+
+                    # render and output HTML
+                    markdown_body = markdown.convert(markdown_text)
                     html = page.render(build_time=build_time, wiki_title=wiki_title, author=author, repo=repo, license=license, title=file[:-3], markdown_body=markdown_body)
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
+
+                    # remember this page for All Pages
                     all_pages.append({'title':f"{readable_path}/{file[:-3]}", 'path':f"{path}/{clean_name[:-3]}.html"})
+                # copy all original files
                 shutil.copy(Path(root) / file, Path(dir_output) / path / clean_name)
 
         # copy README.html to index.html if no index.html

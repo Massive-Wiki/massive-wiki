@@ -1,3 +1,21 @@
+---
+emails:
+  - kaminski@istori.com
+  - peter.kaminski@gmail.com
+full-name: "Peter Kaminski"
+organizations:
+  - "Open Global Mind"
+  - "Collective Sense Commons"
+  - Flotilla
+  - "Free Jerry's Brain"
+phones:
+  - "+1 650-918-6101"
+short-name: Pete
+sortable-name: "Kaminski, Peter"
+twitter: "@peterkaminski"
+urls:
+  - "http://peterkaminski.com/"
+---
 # Peter Kaminski
 
 (pic to go here)
