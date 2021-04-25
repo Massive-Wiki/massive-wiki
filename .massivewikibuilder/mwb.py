@@ -76,7 +76,7 @@ def main():
     wiki_title = "Massive Wiki"
     author = "the Massive Wiki Team"
     repo = '<a href="https://github.com/Massive-Wiki/massive-wiki">GitHub/Massive-Wiki/massive-wiki</a>'
-    license = '<a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>'
+    license = '<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>'
 
     # remember paths
     dir_output = os.path.abspath(args.output)
