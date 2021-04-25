@@ -5,7 +5,7 @@
 In `.massivewikibuilder/`:
 
 ```
-./mwb.py -w .. -o output -t .
+./mwb.py -w .. -o output -t themes/alto
 ```
 
 ## Develop
