@@ -10,26 +10,9 @@ It's not just a wiki - it's a Massive Wiki.
 
 ## Read More About Massive
 
-- [[Massive Wiki Manifesto]]
-- [[Massive Wiki Conceptual Diagram]]
-- [[Massive Wiki Builder]]
-- [[Massive Wiki People]]
-- [[Ideas and Concerns]]
-
-## Try Massive Wiki Yourself
-
-We are building a Massive Wiki Starter Guidebook.  It is still under construction, please excuse the dust and mess!  Here are the pages we have so far.
-
-[[Massive Wiki Starter Guidebook/1. Clone a Massive Wiki to Your Computer]]
-
-[[Massive Wiki Starter Guidebook/2. Open a Massive Wiki on Your Computer]]
-
-[[Massive Wiki Starter Guidebook/3. Edit a Massive Wiki on Your Computer]]
-
-[[Massive Wiki Starter Guidebook/4. Sync a Massive Wiki]]
-
-[[Massive Wiki Starter Guidebook/5. Centralized Git Collaboration Models]]
-
-[[Massive Wiki Starter Guidebook/6. Resolving Git Sync Issues]]
-
-Here's a summarization, in a [[Massive Wiki Starter Guidebook/Massive Wiki Quick Setup Card]].
+- [[Massive Wiki Manifesto]] - our foundation
+- [[Massive Wiki Conceptual Diagram]] - a diagram showing how it works in practice
+- [[Massive Wiki Starter Guidebook Table Of Contents]] - how to try Massive Wiki yourself
+- [[Massive Wiki Builder]] - a tool to transform a wiki into a static HTML website
+- [[Massive Wiki People]] - some of the people working on Massive Wiki
+- [[Ideas and Concerns]] - a few notes of things we've starting thinking about, not comprehensive
