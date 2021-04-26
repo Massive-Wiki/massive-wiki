@@ -1,5 +1,7 @@
 # Massive Wiki Quick Setup Card
 
+Up: [[Massive Wiki Starter Guidebook Table Of Contents]]
+
 This note summarizes the steps to follow when setting up a new Massive Wiki in Obsidian.
 
 1. Clone the Massive-Wiki GitHub repository using GitHub Desktop.
