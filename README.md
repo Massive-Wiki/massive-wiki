@@ -12,7 +12,7 @@ It's not just a wiki - it's a Massive Wiki.
 
 - [[Massive Wiki Manifesto]] - our foundation
 - [[Massive Wiki Conceptual Diagram]] - a diagram showing how it works in practice
-- [[Massive Wiki Starter Guidebook Table Of Contents]] - how to try Massive Wiki yourself
+- [[Massive Wiki Starter Guidebook/Massive Wiki Starter Guidebook Table Of Contents|Massive Wiki Starter Guidebook Table Of Contents]] - how to try Massive Wiki yourself
 - [[Massive Wiki Builder]] - a tool to transform a wiki into a static HTML website
 - [[Massive Wiki People]] - some of the people working on Massive Wiki
 - [[Ideas and Concerns]] - a few notes of things we've starting thinking about, not comprehensive
