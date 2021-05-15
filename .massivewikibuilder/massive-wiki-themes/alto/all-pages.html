@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Pages - {{wiki_title}}</title>
+    <link rel="stylesheet" href="/mwb-static/css/mystyles.css">
+    <link rel="stylesheet" href="/mwb-static/css/markdown.css">
+  </head>
+  <body class="has-navbar-fixed-top">
+    {% include '_navbar.html' %}
+    <section class="section">
+      <div class="container">
+        {% for page in pages %}
+	<p><a href="{{page.path}}">{{page.title}}</a></p>
+	{% endfor %}
+      </div>
+    </section>
+    {% include '_footer.html' %}
+    <script>{% include '_javascript.html' %}</script>
+  </body>
+</html>
