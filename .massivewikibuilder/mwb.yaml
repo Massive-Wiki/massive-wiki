@@ -1,0 +1,11 @@
+# the title of your wiki
+wiki_title: Massive Wiki
+
+# the author of your wiki
+author: the Massive Wiki Team
+
+# the centralized Git repo (an HTML link is good)
+repo: '<a href="https://github.com/Massive-Wiki/massive-wiki">GitHub/Massive-Wiki/massive-wiki</a>'
+
+# the license for the wiki (a Creative Commons HTML link is good)
+license: '<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>'

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Massive Wiki Builder v1.2.0 - https://github.com/peterkaminski/massivewikibuilder
+# Massive Wiki Builder v1.3.1 - https://github.com/peterkaminski/massivewikibuilder
 
 import argparse
 import json
@@ -8,8 +8,9 @@ import os
 import re
 import shutil
 import sys
+import traceback
 
-from datetime import timezone, datetime
+import datetime
 from pathlib import Path
 
 import yaml
@@ -21,6 +22,7 @@ from mdx_wikilink_plus.mdx_wikilink_plus import WikiLinkPlusExtension
 # set up argparse
 def init_argparse():
     parser = argparse.ArgumentParser(description='Generate HTML pages from Markdown wiki pages.')
+    parser.add_argument('--config', '-c', required=True, help='path to YAML config file')
     parser.add_argument('--output', '-o', required=True, help='directory for output')
     parser.add_argument('--templates', '-t', required=True, help='directory for HTML templates')
     parser.add_argument('--wiki', '-w', required=True, help='directory containing wiki files (Markdown + other)')
@@ -34,13 +36,22 @@ markdown_configs = {
         'url_whitespace': '_',
     },
 }
-markdown = Markdown(output_format="html5", extensions=[WikiLinkPlusExtension(markdown_configs['mdx_wikilink_plus'])])
+markdown_extensions = [
+    'footnotes',
+    WikiLinkPlusExtension(markdown_configs['mdx_wikilink_plus']),
+]
+markdown = Markdown(output_format="html5", extensions=markdown_extensions)
 
 # set up a Jinja2 environment
 def jinja2_environment(path_to_templates):
     return jinja2.Environment(
         loader=jinja2.FileSystemLoader(path_to_templates)
     )
+
+# load config file
+def load_config(path):
+    with open(path) as infile:
+        return yaml.safe_load(infile)
 
 # take a path object pointing to a Markdown file
 # return Markdown (as string) and YAML front matter (as dict)
@@ -49,7 +60,7 @@ def read_markdown_and_front_matter(path):
     with path.open() as infile:
         lines = infile.readlines()
     # take care to look exactly for two `---` lines with valid YAML in between
-    if re.match(r'^---$',lines[0]):
+    if lines and re.match(r'^---$',lines[0]):
         count = 0
         found_front_matter_end = False
         for line in lines[1:]:
@@ -68,15 +79,17 @@ def read_markdown_and_front_matter(path):
     # return Markdown + empty dict
     return ''.join(lines), {}
 
+# handle datetime.date serialization for json.dumps()
+def datetime_date_serializer(o):
+    if isinstance(o, datetime.date):
+        return o.isoformat()
+
 def main():
     argparser = init_argparse();
     args = argparser.parse_args();
 
     # get configuration
-    wiki_title = "Massive Wiki"
-    author = "the Massive Wiki Team"
-    repo = '<a href="https://github.com/Massive-Wiki/massive-wiki">GitHub/Massive-Wiki/massive-wiki</a>'
-    license = '<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>'
+    config = load_config(args.config)
 
     # remember paths
     dir_output = os.path.abspath(args.output)
@@ -95,7 +108,7 @@ def main():
         # copy wiki to output; render .md files to HTML
         all_pages = []
         page = j.get_template('page.html')
-        build_time = datetime.now(timezone.utc).strftime("%A, %B %d, %Y at %H:%M UTC")
+        build_time = datetime.datetime.now(datetime.timezone.utc).strftime("%A, %B %d, %Y at %H:%M UTC")
         for root, dirs, files in os.walk(dir_wiki):
             dirs[:] = [d for d in dirs if not d.startswith('.')]
             files = [f for f in files if not f.startswith('.')]
@@ -112,11 +125,19 @@ def main():
                         print(f"NOTE: YAML syntax error in front matter of '{Path(root) / file}'")
                         front_matter = {}
                     # output JSON of front matter
-                    (Path(dir_output) / path / clean_name).with_suffix(".json").write_text(json.dumps(front_matter, indent=2))
+                    (Path(dir_output) / path / clean_name).with_suffix(".json").write_text(json.dumps(front_matter, indent=2, default=datetime_date_serializer))
 
                     # render and output HTML
                     markdown_body = markdown.convert(markdown_text)
-                    html = page.render(build_time=build_time, wiki_title=wiki_title, author=author, repo=repo, license=license, title=file[:-3], markdown_body=markdown_body)
+                    html = page.render(
+                        build_time=build_time,
+                        wiki_title=config['wiki_title'],
+                        author=config['author'],
+                        repo=config['repo'],
+                        license=config['license'],
+                        title=file[:-3],
+                        markdown_body=markdown_body
+                    )
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
 
                     # remember this page for All Pages
@@ -131,14 +152,21 @@ def main():
         # copy static assets directory
         if os.path.exists(Path(dir_templates) / 'mwb-static'):
             shutil.copytree(Path(dir_templates) / 'mwb-static', Path(dir_output) / 'mwb-static')
-        
+
         # build all-pages.html
         all_pages = sorted(all_pages, key=lambda i: i['title'].lower())
-        html = j.get_template('all-pages.html').render(build_time=build_time, pages=all_pages, wiki_title=wiki_title, author=author, repo=repo, license=license)
+        html = j.get_template('all-pages.html').render(
+            build_time=build_time,
+            pages=all_pages,
+            wiki_title=config['wiki_title'],
+            author=config['author'],
+            repo=config['repo'],
+            license=config['license']
+        )
         (Path(dir_output) / "all-pages.html").write_text(html)
 
     except Exception as e:
-        print(e)
+        traceback.print_exc(e)
 
 if __name__ == "__main__":
     exit(main())
