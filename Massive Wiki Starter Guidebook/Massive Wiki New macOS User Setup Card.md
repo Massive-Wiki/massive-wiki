@@ -1,5 +1,5 @@
 # Massive Wiki new macOS user setup
-#### Last edit: 2021-04-18, Bill Anderson
+#### Last edit: 2021-06-13, Bill Anderson
 
 ## Pre-requisites
 
@@ -29,25 +29,26 @@
 
    error when first pushing changes to GitHub.
 
-  How to do that
-  - Use a browser and login to your GitHub account.
-  - GoTo " Account Settings".
-  - on "Account Settings" page select "Developer Settings" from the LeftSide buttons.
-  - on "Developer Settings" page select "Personal access tokens" button.
-  - on "Personal access tokens" page select "Generate new token" button.
-  - on "New personal access token" page
-	- Enter a name or descriptor word into the "Note" field.
-	- Select the "repo" radio button in the "Select scopes" list.
-	- Scroll to the bottom and select "Generate token"
-	- Select the small 'copy' icon next to the new generated token to copy key to the clipboard.
+  - How to do that
+	- Use a browser and login to your GitHub account.
+    - GoTo " Account Settings".
+    - on "Account Settings" page select "Developer Settings" from the LeftSide buttons.
+    - on "Developer Settings" page select "Personal access tokens" button.
+    - on "Personal access tokens" page select "Generate new token" button.
+      - on "New personal access token" page
+	  - Enter a name or descriptor word into the "Note" field.
+	  - Select the "repo" radio button in the "Select scopes" list.
+	  - Scroll to the bottom and select "Generate token"
+	  - Select the small 'copy' icon next to the new generated token to copy key to the clipboard.
 	  (I also take a screen snapshot of the window with the token for a temporary backup.)
 
   - The final steps involve adding information to the `.gitconfig` file and creating a `.git-credentials` file to hold the personal access token just generated.
     - Setting up git credentials for Massive Wiki use.
     - First, open a Terminal window (Terminal is found in the /Applications/Utilities/ directory)
-      Verify that a .gitconfig file has been created (when you installed GitHub Desktop and logged into GitHub)
+      Verify that a .gitconfig file has been created in the $HOME directory (when you installed GitHub Desktop and logged into GitHub)
 
-          $ ls .gitconfig
+          $ cd
+		  $ ls .gitconfig
 
       will print the file name ".gitconfig" if it exists
 

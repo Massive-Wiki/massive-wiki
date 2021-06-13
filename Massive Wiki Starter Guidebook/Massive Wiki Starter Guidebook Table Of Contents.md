@@ -9,3 +9,4 @@ Welcome to the Starter Guidebook!  This guide is still under active construction
 - [[5. Centralized Git Collaboration Models]]
 - [[6. Resolving Git Sync Issues]]
 - [[Massive Wiki Quick Setup Card]]
+- [[Massive Wiki New macOS User Setup Card]]
