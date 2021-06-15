@@ -44,13 +44,12 @@
 
   - The final steps involve adding information to the `.gitconfig` file and creating a `.git-credentials` file to hold the personal access token just generated.
     - Setting up git credentials for Massive Wiki use.
-    - First, open a Terminal window (Terminal is found in the /Applications/Utilities/ directory)
-      Verify that a .gitconfig file has been created in the $HOME directory (when you installed GitHub Desktop and logged into GitHub)
+    - First, open a Terminal window (Terminal is found in the /Applications/Utilities/ directory) and verify that a .gitconfig file has been created in the $HOME directory (when you installed GitHub Desktop and logged into GitHub)
 
-          $ cd
-          $ ls .gitconfig
-
-      will print the file name ".gitconfig" if it exists
+          		$ cd
+		        $ ls .gitconfig
+		  
+      will print the file name ".gitconfig" if it exists.
 
    - Second, use git commands to set up using the personal access key
       (this command says credentials are stored in a local file named ".git-credentials").
