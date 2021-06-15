@@ -1,5 +1,5 @@
 # Massive Wiki new macOS user setup
-#### Last edit: 2021-06-13, Bill Anderson
+#### Last edit: 2021-06-15, Bill Anderson
 
 ## Pre-requisites
 
@@ -48,7 +48,7 @@
       Verify that a .gitconfig file has been created in the $HOME directory (when you installed GitHub Desktop and logged into GitHub)
 
           $ cd
-		  $ ls .gitconfig
+          $ ls .gitconfig
 
       will print the file name ".gitconfig" if it exists
 
