@@ -11,8 +11,11 @@
   <body class="has-navbar-fixed-top">
     {% include '_navbar.html' %}
     <section class="section">
+      <div class="sidebar markdown-body">
+	{{ sidebar_markdown_body }}
+      </div>
       <div class="container markdown-body">
-        {{ markdown_body }}
+        {{ main_markdown_body }}
       </div>
     </section>
     {% include '_footer.html' %}

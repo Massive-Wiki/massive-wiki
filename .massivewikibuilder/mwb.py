@@ -107,6 +107,12 @@ def main():
 
         # copy wiki to output; render .md files to HTML
         all_pages = []
+
+        # render the sidebar
+        page = j.get_template('sidebar.html')
+        sidebar_markdown_body=page.render(stuff_to_render_goes_here_todo)
+
+        # now do pages
         page = j.get_template('page.html')
         build_time = datetime.datetime.now(datetime.timezone.utc).strftime("%A, %B %d, %Y at %H:%M UTC")
         for root, dirs, files in os.walk(dir_wiki):
@@ -136,7 +142,8 @@ def main():
                         repo=config['repo'],
                         license=config['license'],
                         title=file[:-3],
-                        markdown_body=markdown_body
+                        main_markdown_body=markdown_body,
+                        sidebar_markdown_body=sidebar_markdown_body
                     )
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
 
