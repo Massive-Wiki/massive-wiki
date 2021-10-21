@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Massive Wiki Builder v1.3.1 - https://github.com/peterkaminski/massivewikibuilder
+# Massive Wiki Builder v1.3.3 - https://github.com/peterkaminski/massivewikibuilder
 
 import argparse
 import json
@@ -38,6 +38,7 @@ markdown_configs = {
 }
 markdown_extensions = [
     'footnotes',
+    'tables',
     WikiLinkPlusExtension(markdown_configs['mdx_wikilink_plus']),
 ]
 markdown = Markdown(output_format="html5", extensions=markdown_extensions)
@@ -107,12 +108,6 @@ def main():
 
         # copy wiki to output; render .md files to HTML
         all_pages = []
-
-        # render the sidebar
-        page = j.get_template('sidebar.html')
-        sidebar_markdown_body=page.render(stuff_to_render_goes_here_todo)
-
-        # now do pages
         page = j.get_template('page.html')
         build_time = datetime.datetime.now(datetime.timezone.utc).strftime("%A, %B %d, %Y at %H:%M UTC")
         for root, dirs, files in os.walk(dir_wiki):
@@ -134,6 +129,7 @@ def main():
                     (Path(dir_output) / path / clean_name).with_suffix(".json").write_text(json.dumps(front_matter, indent=2, default=datetime_date_serializer))
 
                     # render and output HTML
+                    markdown.reset() # needed for footnotes extension
                     markdown_body = markdown.convert(markdown_text)
                     html = page.render(
                         build_time=build_time,
@@ -142,8 +138,7 @@ def main():
                         repo=config['repo'],
                         license=config['license'],
                         title=file[:-3],
-                        main_markdown_body=markdown_body,
-                        sidebar_markdown_body=sidebar_markdown_body
+                        markdown_body=markdown_body
                     )
                     (Path(dir_output) / path / clean_name).with_suffix(".html").write_text(html)
 
