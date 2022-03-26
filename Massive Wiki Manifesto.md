@@ -12,7 +12,7 @@ Our name, "Massive Wiki", is inspired by **Ma** rkdown, **S** hared, **V** ersio
 We use Markdown because it is a lingua franca.
 
 ## Shared
-Wiki is best when it's shared with others.  Sharing files lets them move around, from centalized servers to decentralized servers, and from peer to peer.
+Wiki is best when it's shared with others.  Sharing files lets them move around, from centralized servers to decentralized servers, and from peer to peer.
 
 ## Versioned
 When page contention happens, version history is important to be able to do whatever manual merge is necessary.
