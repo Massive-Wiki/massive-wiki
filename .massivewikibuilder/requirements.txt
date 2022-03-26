@@ -2,5 +2,5 @@ Jinja2==2.11.3
 Markdown==3.3.4
 MarkupSafe==1.1.1
 # mdx-wikilink-plus==1.4.0
-git+git://github.com/peterkaminski/mdx_wikilink_plus@master#egg=mdx-wikilink-plus
+git+https://github.com/peterkaminski/mdx_wikilink_plus@master#egg=mdx-wikilink-plus
 PyYAML==5.4.1
