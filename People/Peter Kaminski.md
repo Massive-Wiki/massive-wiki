@@ -6,6 +6,7 @@ full-name: "Peter Kaminski"
 organizations: 
   - "Open Global Mind"
   - "Collective Sense Commons"
+  - "The Meta Project"
   - Flotilla
   - "Free Jerry's Brain"
 phones: 
