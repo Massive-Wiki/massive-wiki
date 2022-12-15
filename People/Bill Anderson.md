@@ -4,14 +4,16 @@ emails:
   - wlanderson@gmail.com
 full-name: William L Anderson
 organizations: 
-  - "Open Global Mind"
   - "Collective Sense Commons"
+  - "Open Global Mind"
   - "Cloud Appreciation Society"
 phones:
   - +1-512-693-7378
 short-name: Bill
 sortable-name: "Anderson, Bill"
+fediverse: "@band@octodon.social"
 twitter: "@band"
+discord: "anderbill#9242"
 urls: 
   - "https://about.me/wlanderson/"
 ---
@@ -24,6 +26,8 @@ When asked recently about what I value and my interests I responded with "Kindne
 
 I am also reviewing my childhood first-order learnings about how the world works.
 
+Birth year atmospheric CO2 concentration [from ice core data](https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat): 310.1 ppm
+
 ## Contact Me
 
 Email: band@acm.org
@@ -32,7 +36,14 @@ Alternate email: wlanderson@gmail.com
 
 Phone | SMS: +1 512-693-7378
 
-Basic landing page (kinda old): https://about.me/wlanderson
+Initials: "WLA"
+
+Basic landing page: https://about.me/wlanderson
+
+Mastodon: https://octodon.social/@band  
+
+Matrix: @anderbill:matrix.org
+
+Discord: anderbill#9242
 
 Twitter: [@band](https://twitter.com/band)
-
