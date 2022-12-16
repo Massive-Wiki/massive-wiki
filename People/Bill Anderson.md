@@ -26,7 +26,7 @@ When asked recently about what I value and my interests I responded with "Kindne
 
 I am also reviewing my childhood first-order learnings about how the world works.
 
-Birth year atmospheric CO2 concentration [from ice core data](https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat): 310.1 ppm
+Birth year atmospheric CO2 concentration [from ice core data](https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat): 310 ppm
 
 ## Contact Me
 
