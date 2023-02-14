@@ -1,3 +1,5 @@
+# Get Started with Massive Wiki
+
 This is an overview of how you and Massive Wiki work together.
 
 If the concepts we cover below are familiar to you, you're good to go!
