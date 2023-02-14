@@ -2,19 +2,24 @@
 
 ## Welcome to Massive Wiki
 
-Massive Wiki is a movement to create a wiki *ecosystem* (rather than just one engine) that provides classic wiki utility, with a plurality of tools and processes that enable decentralization and federation of the pages.
+Using easy linking and named pages, **Wiki** is one of the best ways to organize and share text-based information and knowledge. Wiki was first developed by Ward Cunningham in 1994. 
 
-Wikis are made of pages. Free the pages to go where they need to go!
+**Massive Wiki** turns the usual centralized wiki system inside-out, using simple text files shared by the wiki participants, located on their personal devices. Revisions are tracked automatically, allowing participants to review past versions. Optionally, the wiki can be published to the web, as HTML files.
 
-It's not just a wiki - it's a Massive Wiki.
+Massive Wiki is a collection of open source practices and tools that help you:
+
+- build a wiki for one person (a personal wiki, knowledge garden, or PKM)
+- build a collaborative wiki for multiple people
+- publish your wiki to a website
+
+Read more to [[Get Started with Massive Wiki]].
 
 ## Read More About Massive
 
 - [[Massive Wiki Manifesto]] - our foundation
 - [[Massive Wiki Conceptual Diagram]] - a diagram showing how it works in practice
-- [[Massive Wiki Starter Guidebook/Massive Wiki Starter Guidebook Table Of Contents|Massive Wiki Starter Guidebook Table Of Contents]] - how to try Massive Wiki yourself
 - [[Massive Wiki Meetups]] - weekly Zoom meetup
 - [[Massive Wiki Builder]] - a tool to transform a wiki into a static HTML website
 - [[Massive Wiki People]] - some of the people working on Massive Wiki
-- [[Ideas and Concerns]] - a few notes of things we've starting thinking about, not comprehensive
 - [Developer Wiki](https://developer.massive.wiki/) (developer.massive.wiki) - test and development wiki
+- [[Frequently Asked Questions about Massive Wiki]]

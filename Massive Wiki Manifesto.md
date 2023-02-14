@@ -6,7 +6,9 @@ Wikis are made of pages. Free the pages to go where they need to go!
 
 It's not just a wiki - it's a Massive Wiki.
 
-Our name, "Massive Wiki", is inspired by **Ma** rkdown, **S** hared, **V** ersioned, **F** iles.
+The word "Massive" in Massive Wiki is inspired by an acronym, "MaSVF".
+
+It stands for **Ma** rkdown, **S** hared, **V** ersioned, **F** iles.
 
 ## Markdown
 We use Markdown because it is a lingua franca.
