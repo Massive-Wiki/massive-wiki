@@ -4,11 +4,9 @@ This is a schematic overview of how a Massive Wiki is distributed among a number
 
 Massive Wikis **are a set of files, one per wiki page**, in Markdown format.  We use Git to manage history and distribution of the files.  Currently we're using GitHub to serve as the centralized repository for the wikis, but it could be another server instead, or completely decentralized.
 
-(@Pete, did you _really_ bold that sentence fragment -- )
+A good way to read and edit the whole wiki is to clone the GitHub repo for the wiki, and then use the Obsidian app to open that directory as a vault.
 
-A **good** way to read the **whole wiki** is to clone the GitHub repo for the wiki, and then use the Obsidian.md app to open that directory as a vault.
-
-See more instructions at [[Massive Wiki Starter Guidebook Table of Contents]].
+See more instructions at [[Get Started with Massive Wiki]].
 
 ![[_attachments/massive-wiki-conceptual-diagram-20210425.png]]
 

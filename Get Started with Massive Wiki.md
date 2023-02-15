@@ -20,13 +20,13 @@ There are some editors that have built in support for Markdown. Those are good, 
 ## Give Pages Titles and Make Links
 
 1. Give each page a title. As the first line of text in the file, type `#`, then a space, then the title, like this: `# My Example Page`.
-2. On any page, in the rest of the text on the page, add links to other pages. Create a link by enclosing a word or phrase in double square brackets, like this: `[[My Example Page]]`.
+2. On any pages, add links to other pages. Create a link by enclosing a word or phrase in double square brackets, like this: `[[My Example Page]]`.
 
-Just by using these two conventions, you've got yourself a wiki, with pages and links.  You could, for example, print out all the pages, and then as you were reading a page and got to a link, you could shuffle through all the pages in your printout to find the page with the right title on top, and then read the page.
+Just by using these two conventions, you've got yourself a wiki, with pages and links.  You could now, for example, print out all the pages, and then as you were reading a page and got to a link, you could shuffle through all the pages in your printout to find the page with the right title on top, and then read that destination page.
 
 If you think about it, though, that's not as easy as the web, where you can just read a page, click on a link, and then the new page pops right up.
 
-To make it easier, you might want to use a special editor that knows how to handle links in Markdown.  One very good choice is Obsidian.  Another choice might be Pulsar Editor.
+To make entering and following links easier on your computer, you might want to use a special editor that knows how to handle links in Markdown.  One very good choice is Obsidian.  Another good choice is Pulsar Editor.
 
 ## Sync and Share Files
 
@@ -38,7 +38,7 @@ There are a number of ways to accomplish these goals, each with pros and cons.  
 
 Git is a little difficult to understand, and a little complicated to use. The power, reliability, and standardization it provides make it worth putting up with.
 
-People are working on tools that help explain the complexity and encapsulate the difficulty. You'll find some resources here: "Working with Git".
+People are working on tools that help explain the complexity and encapsulate the difficulty. You'll find some resources here: [[Working with Git]].
 
 When you use Git to share and version Markdown wiki files, you'll have completed the "Massive Wiki checklist":
 
@@ -50,7 +50,7 @@ When you use Git to share and version Markdown wiki files, you'll have completed
 
 ## Publishing to the Web
 
-Do you want to share the pages in your wiki with your friends, or with the world?
+Do you want to share the pages in your wiki with your non-wiki friends, or with the world?
 
 An open source publishing system called Massive Wiki Builder, used in conjunction with Massive Wiki Themes and Massive Wiki Starter (a special empty wiki), makes it easy to have your wiki turned into a website hosted on the web, every time you sync to a cloud service.
 
