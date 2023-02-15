@@ -16,7 +16,7 @@ Read more to [[Get Started with Massive Wiki]].
 
 ## Read More About Massive
 
-- [[Massive Wiki Manifesto]] - our foundation
+- [[What Massive Wiki Means]] - our foundation
 - [[Massive Wiki Conceptual Diagram]] - a diagram showing how it works in practice
 - [[Massive Wiki Meetups]] - weekly Zoom meetup
 - [[Massive Wiki Builder]] - a tool to transform a wiki into a static HTML website
