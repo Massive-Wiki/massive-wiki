@@ -45,7 +45,10 @@ Alternate email: peter.kaminski@gmail.com
 
 Phone: +1 650-918-6101
 
-Website (kinda old): http://peterkaminski.com
+Wiki: <https://peterkaminski.wiki>
 
-Twitter: [@peterkaminski](https://twitter.com/peterkaminski)
+Website (kinda old): <http://peterkaminski.com/>
 
+Mastodon: <https://toolsforthought.rocks/@peterkaminski>
+
+Nostr: `npub1peterka3vphw8z8ls7hpl9c9lxh8ww4la36pf97sycdvtantzu8s97x3za`
