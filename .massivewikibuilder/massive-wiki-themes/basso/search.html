@@ -1,0 +1,92 @@
+{% set page_title = 'Search - ' ~ wiki_title %}{% include '_header.html' %}
+  <style> <!-- TODO: move this to a CSS file -->
+    ul#resList{list-style-position: inside;margin-left:3em;}
+    li.item{list-style:none; padding:5px;}
+    div#renderList{margin-top:1.5em;}
+  </style>
+  <body class="has-navbar-fixed-top">
+    {% include '_navbar.html' %}
+    <section class="section">
+      <div class="container">
+	<div class="columns">
+	  <div class="sidebar column is-one-fifth">
+            <div class="content markdown-body" style="border-right:1px black solid; padding-right:1em;">
+              {{ sidebar_body }}
+            </div>
+	  </div>
+	  <div class="column">
+            <div class="content markdown-body">
+	      <h1>Search in {{wiki_title}}</h1>
+              {% if lunr_index_sitepath != '' %}
+	      <input type="text" placeholder="type search words" id="inputID">
+	      <button type="button" onclick="doSearch();" id="searchButton">Search</button>
+              {% else %}
+	      <p>Lunr search index is not present. It must be enabled by passing the <code>--lunr</code> flag to <code>mwb.py</code>.</p>
+	      <p>Check the Massive Wiki Builder documentation for more details.</p>
+              {% endif %}
+	      <div id="renderList"></div>
+            </div>
+	  </div>
+	</div>
+      </div>
+    </section>
+    {% include '_footer.html' %}
+    <script>{% include '_javascript.html' %}</script>
+    <script>
+      function doSearch() {
+	let searchString=document.getElementById("inputID").value;
+	var ul = document.createElement('ul');
+	ul.setAttribute('id','resList');
+	const searchResultList = index.search(searchString).map((item) => {
+	  return lunr_posts.find((post) => item.ref === post.link)
+	})
+	render_list = document.getElementById('renderList');
+
+	// clear any previous results, then populate results
+	removeAllChildNodes(render_list);
+	render_list.appendChild(ul);
+	searchResultList.forEach(renderResultList);
+        if (ul.childNodes.length == 0) {
+          render_list.append('No results for "' + searchString + '"')
+	}
+
+	// helper to set a single result (in scope of doSearch())
+	function renderResultList(element, index, arr) {
+	  var anchor = document.createElement('a');
+	  anchor.append(document.createTextNode(`${element.title}`));
+	  anchor.setAttribute('class', 'wikilink');
+	  anchor.setAttribute('href',`${element.link}`);
+	  anchor.setAttribute('target', '_blank');
+	  var li = document.createElement('li');
+	  li.setAttribute('class','item');
+	  li.append(anchor);
+	  ul.append(li);
+	}
+      }
+
+      // helper to clear previous search results
+      function removeAllChildNodes(parent) {
+	while (parent.firstChild) {
+	  parent.removeChild(parent.firstChild);
+	}
+      }
+
+      // ensure the DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+	// search on Enter
+	var input_id = document.getElementById('inputID')
+	input_id.focus()
+	input_id.addEventListener('keypress', function(event) {
+	  if (event.key === "Enter") {
+	    event.preventDefault();
+	    document.getElementById("searchButton").click();
+	  }
+	});
+      })
+    </script>
+
+<!-- uncomment to add Hypothes.is
+    <script src="https://hypothes.is/embed.js" async></script>
+-->
+  </body>
+</html>

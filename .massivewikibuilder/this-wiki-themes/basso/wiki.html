@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Missive Weaver</title>
+  </head>
+  <body>
+    <div>
+      {% for item in items %}
+        <div><a href="{{item.download_url}}">{{item.name}}</a></div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -4,21 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{title}} - {{wiki_title}}</title>
+    <title>{% if title != 'README' %}{{title}} - {% endif %}{{wiki_title}}</title>
     <link rel="stylesheet" href="/mwb-static/css/mystyles.css">
     <link rel="stylesheet" href="/mwb-static/css/markdown.css">
   </head>
   <body class="has-navbar-fixed-top">
     {% include '_navbar.html' %}
     <section class="section">
-      <div class="sidebar markdown-body">
-	{{ sidebar_markdown_body }}
-      </div>
-      <div class="container markdown-body">
-        {{ main_markdown_body }}
+      <div class="container">
+        <div class="content markdown-body">
+        {{ markdown_body }}
+        </div>
       </div>
     </section>
     {% include '_footer.html' %}
     <script>{% include '_javascript.html' %}</script>
+<!-- uncomment to add Hypothes.is
+    <script src="https://hypothes.is/embed.js" async></script>
+-->
   </body>
 </html>

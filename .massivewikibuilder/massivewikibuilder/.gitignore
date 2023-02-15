@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Emacs
+*~
+\#*\#
+
+# Python
+venv
+__pycache__
+
+# Node
+node_modules

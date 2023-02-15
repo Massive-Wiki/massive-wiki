@@ -1,0 +1,6 @@
+[submodule ".massivewikibuilder/massivewikibuilder"]
+	path = .massivewikibuilder/massivewikibuilder
+	url = https://github.com/peterkaminski/massivewikibuilder.git
+[submodule ".massivewikibuilder/massive-wiki-themes"]
+	path = .massivewikibuilder/massive-wiki-themes
+	url = https://github.com/peterkaminski/massive-wiki-themes.git

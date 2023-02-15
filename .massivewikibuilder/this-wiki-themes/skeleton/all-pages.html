@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{% if title != 'README' %}{{title}} - {% endif %}{{wiki_title}}</title>
+    <title>All Pages - {{wiki_title}}</title>
   </head>
   <body>
     {% include '_navbar.html' %}
     <div>
-      {{ markdown_body }}
+      {% for page in pages %}
+      <p><a href="{{page.path}}">{{page.title}}</a></p>
+      {% endfor %}
     </div>
     {% include '_footer.html' %}
   </body>
