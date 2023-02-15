@@ -2,7 +2,7 @@
   ignore = "/bin/false"
   base = ".massivewikibuilder/massivewikibuilder"
   publish = "../output"
-  command = "./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso --lunr"
+  command = "./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso --lunr --commits"
 
 [build.environment]
   PYTHON_VERSION = "3.8"
