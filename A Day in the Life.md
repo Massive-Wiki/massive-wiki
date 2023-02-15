@@ -2,7 +2,7 @@
 
 It's possible to use many different tools and practices with Massive Wiki, which is one of its strengths.
 
-However, as sort of a "best practices" overview, here are tools and practices many of us day-to-day with our Massive Wikis.
+However, as sort of a "best practices" overview, here are tools and practices many of us use day-to-day with our Massive Wikis.
 
 - Have more than one Massive Wiki, for different topics, or to collaborate with different groups of people, or to keep some information private and make other information public.
 - Use Obsidian and the Obsidian Git plugin. The Obsidian user community is great, as is Eleanor Konik's [Obsidian Roundup](https://www.eleanorkonik.com/tag/roundup/). (Pulsar Edit is a good choice, too.)
