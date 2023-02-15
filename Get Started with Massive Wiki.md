@@ -15,9 +15,9 @@ You can use standard text editors like Notepad or Text Edit, and standard file m
 
 You can also use similar but enhanced third-party tools that work with standard text files and folders.
 
-There are some editors that have built in support for Markdown, those are good, too.  But read on about links in the next section, you may want one of the tools there instead...
+There are some editors that have built in support for Markdown. Those are good, too.  But read on about links in the next section, you may want one of the tools there instead...
 
-## Give Pages Title and Make Links
+## Give Pages Titles and Make Links
 
 1. Give each page a title. As the first line of text in the file, type `#`, then a space, then the title, like this: `# My Example Page`.
 2. On any page, in the rest of the text on the page, add links to other pages. Create a link by enclosing a word or phrase in double square brackets, like this: `[[My Example Page]]`.
