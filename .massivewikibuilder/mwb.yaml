@@ -9,3 +9,6 @@ repo: '<a href="https://github.com/Massive-Wiki/massive-wiki">GitHub/Massive-Wik
 
 # the license for the wiki (a Creative Commons HTML link is good)
 license: '<a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>'
+
+# the markdown page which will be handled as a sidebar page
+sidebar: Sidebar.md

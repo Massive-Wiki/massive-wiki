@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% if title != 'README' %}{{title}} - {% endif %}{{wiki_title}}</title>
+  </head>
+  <body>
+    <div>
+      <a href="/">Home</a>
+      <a href="/all-pages.html">All Pages</a>
+    </div>
+    <hr />
+    <div>
+      {{ markdown_body }}
+    </div>
+    <hr />
+    <div>
+      <div>{{wiki_title}} by {{author}}.</div>
+      <div>Central repository at {{repo}}.</div>
+      <div>Licensed under {{license}}.</div>
+      <div>Site last updated on {{build_time}}.</div>
+    </div>
+  </body>
+</html>

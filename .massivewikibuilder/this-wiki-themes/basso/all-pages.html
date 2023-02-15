@@ -1,0 +1,43 @@
+{% set page_title = 'All Pages - ' ~ wiki_title %}{% include '_header.html' %}
+  <body class="has-navbar-fixed-top">
+    {% include '_navbar.html' %}
+    <section class="section">
+      <h3>Sorted By Page</h3>
+      <div class="container">
+	<table>
+	  <thead><th width="40%">Page</th><th width="28%">Change</th><th width="16%">Changed By</th><th width="16%">Date</th></thead>
+	  <tbody>
+            {% for page in pages %}
+              {% if page.date %}
+	      <tr><td><a href="{{page.path}}">{{page.title}}</a></td>
+	      <td>{{page.change}}</td>
+	      <td>{{page.author}}</td>
+	      <td>{{page.date}}</td></tr>
+	      {% endif %}
+            {% endfor %}
+	  </tbody>
+	</table>
+      </div>
+      {% if pages_chrono %}
+      <h3>Sorted By Date</h3>
+      <div class="container">
+	<table>
+	  <thead><th width="40%">Page</th><th width="28%">Change</th><th width="16%">Changed By</th><th width="16%">Date</th></thead>
+	  <tbody>
+            {% for page in pages_chrono %}
+              {% if page.date %}
+	      <tr><td><a href="{{page.path}}">{{page.title}}</a></td>
+	      <td>{{page.change}}</td>
+	      <td>{{page.author}}</td>
+	      <td>{{page.date}}</td></tr>
+	      {% endif %}
+            {% endfor %}
+	  </tbody>
+	</table>
+      </div>
+      {% endif %}
+    </section>
+    {% include '_footer.html' %}
+    <script>{% include '_javascript.html' %}</script>
+  </body>
+</html>
