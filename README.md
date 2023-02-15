@@ -1,6 +1,4 @@
-# Massive Wiki
-
-## Welcome to Massive Wiki
+# Welcome to Massive Wiki
 
 Featuring easy linking and named pages, **Wiki** is one of the best ways to organize and share text-based information and knowledge. Wiki was first developed by Ward Cunningham in 1994. 
 
