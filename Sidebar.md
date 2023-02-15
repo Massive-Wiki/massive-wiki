@@ -4,11 +4,11 @@
 
 ## More Info
 
-[[Massive Wiki Conceptual Diagram]]  
-[[Massive Wiki Meetups]]  
+[[Massive Wiki Conceptual Diagram|Conceptual Diagram]]  
+[[Massive Wiki Meetups|Meetups]]  
 [[Massive Wiki Builder]]  
 [[Massive Wiki People]]  
-[[Frequently Asked Questions]]  
+[[Frequently Asked Questions about Massive Wiki|FAQ]]  
 
 ## General Navigation
 
