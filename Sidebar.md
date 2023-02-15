@@ -1,6 +1,6 @@
 # Site Navigation
 
-[[README|Home]]  
+[[README|Massive Wiki Home]]  
 
 ## More Info
 
