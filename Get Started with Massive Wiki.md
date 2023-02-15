@@ -48,6 +48,8 @@ When you use Git to share and version Markdown wiki files, you'll have completed
 - [x] Files
 - [x] Titles and Links
 
+See [[What Massive Wiki Means]] for more background on the items in this checklist.
+
 ## Publishing to the Web
 
 Do you want to share the pages in your wiki with your non-wiki friends, or with the world?

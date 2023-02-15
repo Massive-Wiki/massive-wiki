@@ -7,9 +7,14 @@
 [[Get Started with Massive Wiki|Get Started]]  
 [[Massive Wiki Conceptual Diagram|Conceptual Diagram]]  
 [[Massive Wiki Meetups|Meetups]]  
-[[Massive Wiki Builder]]  
 [[Massive Wiki People]]  
 [[Frequently Asked Questions about Massive Wiki|FAQ]]  
+
+## Even More
+
+[[Massive Wiki Builder]]  
+[[Working with Git]]  
+[[A Day in the Life]]  
 
 ## General Navigation
 
