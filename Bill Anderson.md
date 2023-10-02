@@ -1,26 +1,26 @@
 ---
-emails: 
+emails:
   - band@acm.org
   - wlanderson@gmail.com
 full-name: William L Anderson
-organizations: 
-  - "Collective Sense Commons"
-  - "Open Global Mind"
-  - "Cloud Appreciation Society"
+organizations:
+  - Collective Sense Commons
+  - Open Global Mind
+  - Cloud Appreciation Society
 phones:
   - +1-512-693-7378
 short-name: Bill
-sortable-name: "Anderson, Bill"
+sortable-name: Anderson, Bill
 fediverse: "@band@octodon.social"
-twitter: "@band"
-discord: "anderbill#9242"
-urls: 
-  - "https://about.me/wlanderson/"
+twitter (deprecated): "@band"
+discord: anderbill#9242
+urls:
+  - https://about.me/wlanderson/
 ---
 # Bill Anderson
 
 ## What about me?
-A retired data informatician (what does that mean?), sociotechnical (what? another big word?) computer systems engineer, and chemist. Also an open access advocate and inveterate punster.
+A retired data informatician, socio-technical systems engineer, and chemist. Also an open access advocate and inveterate punster.
 
 When asked recently about what I value and my interests I responded with "Kindness, curiosity, honesty, and humor. I am interested in learning about, examining, and promoting abundance-based models and ideas of sustainable human societies."
 
@@ -46,4 +46,4 @@ Matrix: @anderbill:matrix.org
 
 Discord: anderbill#9242
 
-Twitter: [@band](https://twitter.com/band)
+Twitter (deprecated): [@band](https://twitter.com/band)
