@@ -11,3 +11,6 @@
 
 # Massive Wiki Builder
 .massivewikibuilder/output/*
+
+# misc software artifacts
+*.bkp
