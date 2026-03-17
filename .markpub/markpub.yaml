@@ -1,0 +1,11 @@
+wiki_title: Massive Wiki
+author: the Massive Wiki Team
+edit_url: https://github.com/Massive-Wiki/massive-wiki/edit/
+edit_branch: main
+repo: <a href="https://github.com/Massive-Wiki/massive-wiki">Massive Wiki</a>
+license: <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution
+  4.0 International License</a>
+recent_changes_count: 5
+sidebar: Sidebar.md
+no_edit_url_pages: null
+excluded_directories: null

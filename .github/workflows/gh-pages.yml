@@ -1,0 +1,47 @@
+name: Markpub deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: install Python dependencies
+      run: |
+        cd .markpub
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: install node modules
+      working-directory: .markpub
+      run: |
+        npm ci
+
+    - name: Build website
+      run: |
+        cd .markpub
+        markpub build -i .. -o ../output -r /massive-wiki --lunr --commits
+
+    - name: add a nojekyll file
+      run: touch $GITHUB_WORKSPACE/output/.nojekyll
+      
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: output	
