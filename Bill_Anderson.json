@@ -1,0 +1,23 @@
+{
+  "emails": [
+    "band@acm.org",
+    "wlanderson@gmail.com"
+  ],
+  "full-name": "William L Anderson",
+  "organizations": [
+    "Collective Sense Commons",
+    "Open Global Mind",
+    "Cloud Appreciation Society"
+  ],
+  "phones": [
+    "+1-512-693-7378"
+  ],
+  "short-name": "Bill",
+  "sortable-name": "Anderson, Bill",
+  "fediverse": "@band@octodon.social",
+  "twitter (deprecated)": "@band",
+  "discord": "anderbill#9242",
+  "urls": [
+    "https://about.me/wlanderson/"
+  ]
+}

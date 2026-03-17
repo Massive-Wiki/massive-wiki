@@ -1,0 +1,262 @@
+/* Base Styles */
+
+body {
+  font-size: 1.0rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+  color: #333;
+  background: #FEFEFE;
+}
+
+/* Typography */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* Media */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+#side-column {
+  font-size: 0.9em;
+  background-color: white;
+  min-width: 12em;
+  max-height: 80vh;
+  padding: 20px;
+  margin-right: 10px;
+  overflow-y: auto;
+  border-right: 1px solid #454545;
+}
+
+#side-column .navlinks ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#side-column .navlinks li {
+  margin-bottom: .7em;
+}
+
+#side-column .navlinks a {
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: .07rem;
+  display: inline-block;
+  padding: .2em 1em;
+  background-color: #d6eaf8;
+  color: #333;
+  text-decoration: none;
+  border: 1px #c0d4e4;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#side-column .navlinks a:hover {
+  background-color: #e4f4fc;
+  color: #484848;
+}
+
+#side-column .navlinks button {
+    background-color: #d6eaf8;
+    padding: .2em 1em;
+    color: #333;
+    border: 1px #c0d4e4;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: .07rem;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#main-column {
+  max-width: 43em;
+  background-color: white;
+  padding: 0px 20px 20px 20px;
+  flex-grow: 1;
+  margin-left: 2em;
+}
+
+/* Header */
+#header {
+  font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+  font-size: 2.25rem;
+  margin: 0.5em 0 0.2em;
+  color: black;
+  background: #d6eaf8;
+  background: #3298dc;
+  border-bottom: 2px solid #4058c0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#header-link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#hamburger-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+/* make space around All Pages table */
+div#allPagesTableWrapper {
+    margin: 3em 4em 1em 4em;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.floating {
+  position: absolute;
+  left: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+.allpages-max-width {
+    max-width: 83% !important;
+}
+
+/* Recent Changes page abstract */
+blockquote.recent-changes-page-abstract {
+  margin-left: 2em;
+}
+
+/* transclusion error */
+span.transclusion-error {
+  color: #dd3333;
+}
+
+/* Footer */
+.footer {
+  background-color: #fafafa;
+  padding: 2rem 0rem 3rem;
+}
+
+/* Buttons */
+.button {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button.is-light {
+  background-color: whitesmoke;
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Edit This Page */
+.edit-this-page-button {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  display: inline-block;
+  padding: .25em .5em;
+  background-color: #d6eaf8;
+  border: 1px #c0d4e4;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .5em;
+  transition: background-color 0.3s ease;
+}
+
+.edit-this-page-button a:hover {
+  background-color: #e4f4fc;
+  color: #484848;
+}
+
+/* incipient link */
+span.incipient-wikilink {
+  color: #dd3333;
+  position: relative;
+  display: inline-block;
+  text-decoration: underline dashed;
+  cursor: pointer;
+}
+
+/* body of incipient link popup */
+span.incipient-wikilink::before {
+  content: "No page exists for this link yet; one may be created in the future.";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ee8;
+  color: #000;
+  padding: .1em .5em .1em .5em;
+  border-radius: .5em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+/* display the incipient link popup */
+span.incipient-wikilink:hover::before {
+  opacity: 1;
+}
+
+/* the small "speech bubble" triangle under the incipient link popup */
+span.incipient-wikilink:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: .5em solid transparent;
+  border-top-color: #ee8;
+  border-bottom: 0;
+  margin-left: -.5em;
+  margin-bottom: -.5em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}

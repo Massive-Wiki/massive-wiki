@@ -1,0 +1,8 @@
+[build]
+  ignore = "/bin/false"
+  base = ".markpub"
+  publish = "./output"
+  command = "markpub build -i .. -o ./output --lunr --commits"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
