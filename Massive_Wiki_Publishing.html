@@ -11,32 +11,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS replaced with custom utility classes in style.css -->
     <link rel="stylesheet" href="/massive-wiki/markpub_static/css/style.css">
     <link rel="stylesheet" href="/massive-wiki/markpub_static/css/custom.css">
     <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.12.0/dist/bluesky-comments.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="/massive-wiki/lunr-index-1773784688.9008195.js"></script>
+    <script src="/massive-wiki/lunr-index-1773785065.5300114.js"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
     
     
-    <script src="/massive-wiki/lunr-posts-1773784688.9008195.js"></script>
+    <script src="/massive-wiki/lunr-posts-1773785065.5300114.js"></script>
     <script> function randomPageLink() { return "/massive-wiki"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
     
   </head>
-<body>
-  <div id="header">
-    <span id="hamburger-btn"
-    class="hidden">&#9776;</span><a class="button is-light" id="header-link" href="/massive-wiki/index.html">Massive Wiki</a>
-  </div>
+<body class="font-roboto text-gray-800 bg-gray-50 leading-relaxed">
+  <!-- Header -->
+    <header id="header" class="bg-gradient-to-r from-blue-500 to-blue-600 border-b-2 border-blue-700 px-4 py-3 sm:px-6">
+    <div class="flex items-center">
+      <button id="hamburger-btn" class="hidden text-white text-2xl mr-3 hover:text-blue-100 transition-colors" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <a id="header-link" href="/massive-wiki/index.html" 
+         class="text-white text-2xl font-light font-roboto uppercase tracking-wide hover:text-blue-100 transition-colors no-underline">
+        Massive Wiki
+      </a>
+    </div>
+  </header>
 
-  <div class="container" id="flex-container">
-    <div id="side-column">
-      <div>
-        <button id="hide-btn">Hide</button>
-        <button id="move-btn" class="hidden">Move to Sidebar</button>
+  <!-- Main Container -->
+  <div id="flex-container" class="flex max-w-full px-4 sm:px-6 lg:px-8">
+    <!-- Sidebar -->
+    <aside id="side-column" class="bg-white min-w-48 max-h-[80vh] p-5
+				   mr-4 overflow-y-auto border-r
+				   border-gray-300 shadow-sm">
+      <div class="mb-4">
+        <button id="hide-btn" class="px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors mr-2">
+          Hide
+        </button>
+        <button id="move-btn" class="hidden px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors">
+          Move to Sidebar
+        </button>
       </div>
-      <h3>Site Navigation</h3>
+      <div class="sidebar-content">
+        <h3>Site Navigation</h3>
 <div class="navlinks">
 <ul>
 <li><a class="wikilink" href="/massive-wiki/README.html">HOME</a></li>
@@ -51,31 +69,37 @@
   </button>
 </div>
 
-    </div>
+      </div>
+    </aside>
 
-    <div id="main-column">
+    <!-- Main Content -->
+    <main id="main-column" class="max-w-3xl bg-white px-5 py-0 pb-5 flex-grow ml-8 shadow-sm rounded-lg">
       
-      <div> <!-- edit this page button -->
-	<p style="float:right; margin:.5em .5em
-	.5em"><a target="_blank" href="https://github.com/Massive-Wiki/massive-wiki/edit/main/Massive Wiki Publishing.md"
-	class="edit-this-page-button">Edit on GitHub</a></p>
-	<br clear="all">
-      </div> <!-- edit this page button -->
+      <div class="flex justify-end mb-4 pt-4">
+        <a target="_blank" href="https://github.com/Massive-Wiki/massive-wiki/edit/main/Massive Wiki Publishing.md" 
+           class="inline-block px-3 py-1 bg-blue-100 border border-blue-200 text-gray-700 text-sm font-trebuchet rounded-lg hover:bg-blue-200 transition-colors no-underline">
+          Edit on GitHub
+        </a>
+      </div>
       
-      <h1>Massive Wiki Publishing</h1>
+      
+      <div class="prose prose-gray max-w-none">
+        <h1>Massive Wiki Publishing</h1>
 <p>You can use many applications to view and edit Massive Wikis.</p>
 <p><a href="https://markpub.org">Markpub</a> converts a Massive Wiki into a static HTML website, for easy viewing on the web. Markpub will recreate the main <a href="https://massive.wiki/">Massive Wiki</a> website from its Markdown source files every time someone pushes changes to the associated GitHub repository.</p>
 <p>You can see Markpub on the <a class="wikilink" href="/massive-wiki/Massive_Wiki_Conceptual_Diagram.html">Massive Wiki Conceptual Diagram</a>, in the center.</p>
 
+      </div>
       
-    </div>
+      
+    </main>
   </div>
   <script src="/massive-wiki/markpub_static/js/script.js"></script>
   
-  <footer class="footer">
-  <div class="content has-text-centered">
+  <footer class="bg-gray-100 py-8 mt-12">
+  <div class="text-center text-gray-600 space-y-2">
     
-    <div><strong>Massive Wiki</strong> by the Massive Wiki Team.</div>
+    <div><strong class="font-semibold text-gray-800">Massive Wiki</strong> by the Massive Wiki Team.</div>
     
     
     <div>Central repository at <a href="https://github.com/Massive-Wiki/massive-wiki">Massive Wiki</a>.</div>
@@ -83,7 +107,7 @@
     
     <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
     
-    <div><em>Site last updated on Tuesday, March 17, 2026 at 21:58 UTC.</em></div>
+    <div class="text-sm italic">Site last updated on Tuesday, March 17, 2026 at 22:04 UTC.</div>
   </div>
 </footer>
 </body>
