@@ -9,6 +9,6 @@
 - [[Vincent Arena]]
 - (you?)
 
-## Communication Channels
+## Communication Channel
 
-- [Massive Wiki Chat](https://chat.collectivesensecommons.org/agora/channels/massive-wiki) (CSC Mattermost)
+- [Massive Wiki Matrix Room](https://matrix.to/#/#massive_wiki:matrix.org)  
