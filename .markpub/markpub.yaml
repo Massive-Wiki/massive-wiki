@@ -9,3 +9,4 @@ recent_changes_count: 5
 sidebar: Sidebar.md
 no_edit_url_pages: null
 excluded_directories: null
+theme: elysium
