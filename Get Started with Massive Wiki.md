@@ -1,28 +1,28 @@
 # Get Started with Massive Wiki
 
-This is an overview of how you and Massive Wiki work together.
+This is an overview of how you and Massive Wiki can work together.
 
-If the concepts we cover below are familiar to you, you're good to go!
+If the concepts below are familiar to you, you're good to go!
 
 If some of concepts are new, it may take a little while to familiarize yourself with everything. It might help to find a tech-oriented friend to help you. Or email us at [help@massive.wiki](mailto:help@massive.wiki), and one of our volunteers will be in touch.
 
-## Create and Edit Text Files
+## Create and Edit Text Files (wiki pages)
 
 1. Create and edit simple text files in a folder on a computer. Each file will be a page in the wiki.  
 2. Use Markdown for simple formatting, as desired.  
 
-You can use standard text editors like Notepad or Text Edit, and standard file managers like Windows Explorer or Finder.
+You can use standard text editors like _Notepad_ or _Text Edit_, and standard file managers like _Windows Explorer_ or _Finder_.
 
 You can also use similar but enhanced third-party tools that work with standard text files and folders.
 
-There are some editors that have built in support for Markdown. Those are good, too.  But read on about links in the next section, you may want one of the tools there instead....
+There are some editors that have built in support for Markdown. Those are good, too.  But read on about links in the next section, you may want one of the tools there instead ....  
 
 ## Give Pages Titles and Make Links
 
 1. Give each page a title. As the first line of text in the file, type `#`, then a space, then the title, like this: `# My Example Page`.  
 2. On any pages, add links to other pages. Create a link by enclosing a word or phrase in double square brackets, like this: `[[My Example Page]]`.  
 
-Just by using these two conventions, you've got yourself a wiki, with pages and links.  You could now, for example, print out all the pages, and then as you were reading a page and got to a link, you could shuffle through all the pages in your printout to find the page with the right title on top, and then read that destination page.
+Just by using these two conventions, you have got yourself a wiki, with pages and links.  You could now, for example, print out all the pages, and then as you were reading a page and got to a link, you could shuffle through all the pages in your printout to find the page with the right title on top, and then read that destination page.
 
 If you think about it, though, that's not as easy as the web, where you can just read a page, click on a link, and then the new page pops right up.
 
@@ -54,6 +54,6 @@ See [[What Massive Wiki Means]] for more background on the items in this checkli
 
 Do you want to share the pages in your wiki with your non-wiki friends, or with the world?
 
-An open source publishing system called Massive Wiki Builder, used in conjunction with Massive Wiki Themes and Massive Wiki Starter (a special empty wiki), makes it easy to have your wiki turned into a website hosted on the web, every time you sync to a cloud service.
+An open source publishing system called Markpub, used in conjunction with Markpub Themes and Massive Wiki Starter (a special empty wiki), makes it easy to have your wiki turned into a website hosted on the web, every time you synchronize changes to a cloud service.
 
 Read more about [[Massive Wiki Builder]] and [[Massive Wiki Starter]].
