@@ -12,7 +12,7 @@ Massive Wiki inherits some key features from the Wiki Wiki Web pattern invented 
 
 Massive Wiki can be set up to be just a folder of text files on your authors' computer, that are as easy to edit or rearrange as any other text files on their computer. You can add authors by just asking them to use text files on their computer.
 
-The plain text format used by Massive Wiki works with any standard operating system or computer interface device, including speech-based or legacy computers.
+The plain text format used by Massive Wiki works with any standard operating system or computer interface device, including speech-based and legacy computers.
 ### Decentralization
 
 Massive Wiki is built to diffuse information across space and time, unlike a centralized server-based wiki or website. Each author has a copy of the whole wiki, in text format. For public wikis, there's also a copy on GitHub or another public Git forge.
@@ -27,18 +27,18 @@ A Massive Wiki is much more likely to survive for decades or centuries, even if 
 In "Massive Wiki", the word "Massive" is inspired by an acronym, "MaSVF". The word "Wiki" represents naming and easy linking between pages, as well as the "wiki culture" of collaborative writing.
 
 MaSVF stands for **Ma** rkdown, **S** hared, **V** ersioned, **F** iles.
-### Markdown
+#### Markdown
 
 We use **Markdown** because it is a lingua franca. It is simple to learn and use, and "good enough" for many formatting needs.
-### Shared
+#### Shared
 
 Wiki is best when it is **shared** with others. Sharing files lets them move around, from centralized servers to decentralized servers, and from peer to peer.
-### Versioned
+#### Versioned
 
 When page contention happens, **version** history is important to be able to do whatever manual merge is necessary.
 
 Version history is also very handy if you want to refer back to a previous changes made to a page.
-### Files
+#### Files
 
 Each page is one **file.**
 
