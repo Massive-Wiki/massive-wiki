@@ -56,4 +56,4 @@ Do you want to share the pages in your wiki with your non-wiki friends, or with 
 
 An open source publishing system called Markpub, used in conjunction with Markpub Themes and Massive Wiki Starter (a special empty wiki), makes it easy to have your wiki turned into a website hosted on the web, every time you synchronize changes to a cloud service.
 
-Read more about [[Massive Wiki Builder]] and [[Massive Wiki Starter]].
+Read more about [Markpub](https://markpub.org) and [[Massive Wiki Starter]].

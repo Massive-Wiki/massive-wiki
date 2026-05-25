@@ -69,8 +69,19 @@ Pro tip: Showing gratitude to the publishers in your community helps them keep p
 
 For more about wiki patterns, some technology details, and IP practices, cf. [[The Massive Wiki Pattern]]  
 
-
 ## How to set up and use a Massive Wiki  
 
+Some pre-requisite knowledge and know-how:  
+1. Familiarity with Markdown formatting of text files  
+2. Some experience using `git` and [Github](https://github.com)  
 
+The basic steps to getting a Massive Wiki working:  
+1. Gather the Markdown files to be worked on and shared into a folder (this folder can contain subfolders)  
+2. Establish this folder as a `git` repository that is hosted on Github  
+3. Share this repository with collaborators and establish practices to support sharing the document work (writing, reviewing, editing, etc.) (You probably already know how to work together. Using `git` to support document collaboration is best with some rules of practice.)  
 
+The steps to publish the wiki documents on the Web:  
+1. Install and configure [Markpub](https://markpub.org)  
+	- set web site configuration properties in `mwb.yaml`
+2. Set up an account on a web-hosting service such as [Netlify](https://netlify.app) 
+3. Markpub is configured to re-publish the website when the Github repository content is updated.
